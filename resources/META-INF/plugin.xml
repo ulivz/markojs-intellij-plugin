@@ -27,6 +27,8 @@
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
     <fileTypeFactory implementation="com.markoplugin.MarkoFileTypeFactory" />
+    <lang.parserDefinition language="Marko" implementationClass="com.markoplugin.MarkoParserDefinition"/>
+    <lang.syntaxHighlighterFactory key="Marko" implementationClass="com.markoplugin.MarkoSyntaxHighlighterFactory"/>
   </extensions>
 
   <actions>

@@ -1,0 +1,20 @@
+{
+  parserClass="com.markoplugin.parser.MarkoParser"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Marko"
+  psiImplClassSuffix="Impl"
+  psiPackage="com.markoplugin.psi"
+  psiImplPackage="com.markoplugin.psi.impl"
+
+  elementTypeHolderClass="com.markoplugin.psi.MarkoTypes"
+  elementTypeClass="com.markoplugin.psi.MarkoElementType"
+  tokenTypeClass="com.markoplugin.psi.MarkoTokenType"
+}
+
+markoFile ::= item_*
+
+private item_ ::= (property|COMMENT|CRLF)
+
+property ::= (KEY? SEPARATOR VALUE?) | KEY
